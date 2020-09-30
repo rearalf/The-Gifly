@@ -1,0 +1,15 @@
+.Gif {
+    position: relative;
+}
+
+.Gif img {
+    max-width: 100%;
+}
+
+.Gif h3 {
+    position: absolute;
+    bottom: 4px;
+    background-color: hsl(220, 12%, 18%, .5);
+    color: hsla(0, 0%, 90%, .8);
+    padding: 8px;
+}

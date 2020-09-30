@@ -1,0 +1,21 @@
+:root {
+    --results-columns: 1;
+}
+
+.ContentGifs {
+    column-count: var(--results-columns);
+    column-gap: .5rem;
+    row-gap: .5rem;
+}
+
+@media screen and (min-width: 500px) {
+    :root {
+        --results-columns: 2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --results-columns: 3;
+    }
+}
