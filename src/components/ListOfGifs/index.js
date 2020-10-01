@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
-import { Gifs } from '../Gifs';
+import { Gifs } from '../Gif';
 
 export const ListOfGifs = ({ gifs }) => {
-    return <div className="ContentGifs">{gifs.map(data => <Gifs key={data.id} {...data} />)}</div>;
+    return <div className="ListOfGifs">{gifs.map(data => <Gifs key={data.id} {...data} />)}</div>;
 };

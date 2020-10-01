@@ -1,4 +1,4 @@
-.Gif {
+.Gif-link {
     position: relative;
 }
 
@@ -6,7 +6,7 @@
     max-width: 100%;
 }
 
-.Gif h3 {
+.Gif h4 {
     position: absolute;
     bottom: 4px;
     background-color: hsl(220, 12%, 18%, .5);

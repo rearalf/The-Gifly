@@ -6,11 +6,11 @@ export const Gifs = data => {
     const { id, title, url } = data;
 
     return (
-        <Link to={`/gif/${id}`}>
-            <a href="/" id={id} className="Gif">
-                <h3>{title}</h3>
+        <div className="Gif">
+            <Link to={`/gif/${id}`} className="Gif-link">
+                <h4>{title}</h4>
                 <img src={url} alt={title} />
-            </a>
-        </Link>
+            </Link>
+        </div>
     );
 };

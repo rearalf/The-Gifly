@@ -1,0 +1,40 @@
+.CategoryTitle {
+    font-size: 1.5em;
+}
+
+.CategoryList {
+    margin-top: 2rem;
+    list-style-position: inside;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+
+.CategoryList li {
+    margin: .2rem;
+}
+
+.CategoryLink {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: inherit;
+    transition: color ease-in 0.1s;
+}
+
+.CategoryLink:hover {
+    color: hsl(220, 41%, 58%);
+}
+
+@media screen and (min-width: 55rem) {
+    .CategoryList {
+        list-style: none;
+        padding-left: 10px;
+        display: list-item;
+    }
+
+    .CategoryList li {
+        margin: .2rem 0;
+    }
+}

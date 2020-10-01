@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import './styles.css';
 import { Link } from 'wouter';
-import { Gifs } from '../../components/Gifs';
+import { Gifs } from '../../components/Gif';
 import useGlobalGifs from '../../hooks/useGlobalGifs';
 
 export const Detail = ({ params }) => {
