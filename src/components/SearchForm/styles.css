@@ -1,0 +1,35 @@
+.SearchForm {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.SearchForm input {
+    padding: 10px 5px 10px 15px;
+    border: none;
+    color: hsl(220, 13%, 18%);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 2px 4px 5px 0 hsl(220, 13%, 40%);
+}
+
+.SearchForm button {
+    padding: 10px 15px;
+    color: #ffffff;
+    background-color: hsl(220, 13%, 40%);
+    border: none;
+    box-shadow: 2px 4px 5px 0 hsl(220, 13%, 40%, .8);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.SearchForm input:focus {
+    outline-offset: -1px;
+    outline-color: hsl(220, 13%, 40%);
+}
+
+.SearchForm button:hover {
+    background-color: hsl(220, 13%, 30%);
+}

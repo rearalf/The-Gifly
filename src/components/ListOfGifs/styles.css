@@ -1,21 +1,8 @@
-:root {
-    --results-columns: 1;
-}
-
 .ListOfGifs {
-    column-count: var(--results-columns);
-    column-gap: .5rem;
-    row-gap: .5rem;
-}
-
-@media screen and (min-width: 500px) {
-    :root {
-        --results-columns: 2;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    :root {
-        --results-columns: 3;
-    }
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    grid-template-rows: masonry;
+    align-items: center;
 }

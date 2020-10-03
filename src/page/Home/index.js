@@ -1,34 +1,19 @@
-import React, { Fragment, useState } from 'react';
-import { Link, useLocation } from 'wouter';
-import TrendingSearches from 'components/TrendingSearches';
-import { useGifsTranding } from 'hooks/useGifsTrending';
+import React, { Fragment } from 'react';
+import { Link } from 'wouter';
 import { Spinner } from 'components/Spinner';
 import { ListOfGifs } from 'components/ListOfGifs';
+import { SearchForm } from 'components/SearchForm';
+import { useGifsTranding } from 'hooks/useGifsTrending';
+import TrendingSearches from 'components/TrendingSearches';
 import './styles.css';
 
 export const Home = () => {
-    const [ keyword, setKeyword ] = useState('');
-    const Location = useLocation();
-    const setLocation = Location[1];
     const Lastkeyword = localStorage.getItem('LastKeyword');
     const { loading, gifs } = useGifsTranding();
 
-    const handleSubmit = e => {
-        e.preventDefault();
-        setLocation(`/search/${keyword}`);
-    };
-
-    const handleChange = e => {
-        setKeyword(e.target.value);
-    };
-
     return (
         <Fragment>
-            <h1 className="Title">The Gifytify</h1>
-            <form onSubmit={handleSubmit} className="SearchForm">
-                <input type="text" value={keyword} onChange={handleChange} />
-                <button type="submit">Buscar</button>
-            </form>
+            <SearchForm />
             {Lastkeyword && (
                 <p>
                     Ultima busqueda &nbsp;
