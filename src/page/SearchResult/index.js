@@ -6,6 +6,7 @@ import { Spinner } from '../../components/Spinner';
 import { useGifs } from '../../hooks/useGifs';
 import { useNearScreen } from 'hooks/useNearScreen';
 import debounce from 'just-debounce-it';
+import { Helmet } from 'react-helmet-async';
 
 export const SearchResult = ({ params }) => {
     const { keyword } = params;
@@ -17,12 +18,8 @@ export const SearchResult = ({ params }) => {
         once: false,
     });
 
-    //const handleNextPage = () => setPage(prevPage => prevPage + 1);
-
     const debounceHandleNextPage = useCallback(
-        () => {
-            debounce(setPage(prevPage => prevPage + 1), 1000);
-        },
+        debounce(() => setPage(prevPage => prevPage + 1), 200),
         [ setPage ],
     );
 
@@ -35,6 +32,10 @@ export const SearchResult = ({ params }) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <title>{keyword} || The Gifly</title>
+                <meta name="description" content={`Search of ${keyword}`} />
+            </Helmet>
             <h1 className="Title">Los Gifs sobre {decodeURI(keyword)} </h1>
             <Link to="/">
                 <a href="/" className="Return">

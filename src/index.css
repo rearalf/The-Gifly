@@ -1,3 +1,15 @@
+:root {
+    --BaseColor: hsl(220, 13%, 18%);
+    --FontColor: #ffffff;
+    --brand-color_1: hsl(325, 100%, 30%);
+    --brand-color_2: hsl(130, 100%, 30%);
+    --brand-color_3: hsl(35, 100%, 30%);
+    --brand-color_4: hsl(360, 100%, 30%);
+    --brand-color_5: hsl(15, 100%, 30%);
+    --brand-color_6: hsl(70, 100%, 30%);
+    --gifShadow-size: 4px;
+}
+
 *,
 *::before,
 *::after {
@@ -16,8 +28,8 @@ body {
         'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #282c34;
-    color: white;
+    background-color: var(--BaseColor);
+    color: var(--FontColor);
 }
 
 code {

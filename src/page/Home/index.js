@@ -5,6 +5,7 @@ import { ListOfGifs } from 'components/ListOfGifs';
 import { SearchForm } from 'components/SearchForm';
 import { useGifsTranding } from 'hooks/useGifsTrending';
 import TrendingSearches from 'components/TrendingSearches';
+import { Helmet } from 'react-helmet-async';
 import './styles.css';
 
 export const Home = () => {
@@ -13,6 +14,10 @@ export const Home = () => {
 
     return (
         <Fragment>
+            <Helmet>
+                <title>Home || The Gifly</title>
+                <meta name="description" content="Search of Gifs" />
+            </Helmet>
             <SearchForm />
             {Lastkeyword && (
                 <p>
